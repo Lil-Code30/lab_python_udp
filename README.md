@@ -8,3 +8,11 @@ L'objectif de ce laboratoire est de vous familiariser avec la programmation de r
 
 - Python 3.x installé sur votre ordinateur
 - Accès à un terminal ou à un IDE
+
+## Loko Ismael
+
+### Questions
+
+- Expliquez en 2–3 phrases pourquoi len(s) peut être différent de len(b).
+  **Reponse:**
+  > len(s) compte le nombre de caractères Unicode dans le texte, alors que len(b) compte le nombre de bytes reels dans le fichier
