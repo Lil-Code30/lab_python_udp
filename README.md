@@ -24,3 +24,9 @@ L'objectif de ce laboratoire est de vous familiariser avec la programmation de r
    **Réponse:**
 
    > parce que la communications réseau sont basées sur le transfert des bytes (chaîne d’octets)
+
+3. Quelle différence entre digest() et hexdigest() ?
+
+   **Réponse:**
+
+   > digest() renvoie le hash sous forme binaires (octets) tandis que hexdigest() renvoie le hash sous forme textuelles (hexadécimal).
