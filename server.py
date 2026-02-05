@@ -9,5 +9,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
     while True:
         data, addr = s.recvfrom(64)
         print(f"Reçu {len(data)} octets de {addr}")
-        print(f"message : {data}") # affichage du message Reçu
         s.sendto(b"OK", addr)

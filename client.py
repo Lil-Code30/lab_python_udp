@@ -4,8 +4,8 @@ from pathlib import Path
 HOST = "127.0.0.1"
 PORT = 12345
 
-# msg = Path("data/message.txt").read_text(encoding="utf-8").encode("utf-8")
-msg = input("What is your message? ").encode("utf-8")
+msg = Path("data/message.txt").read_text(encoding="utf-8").encode("utf-8")
+# msg = input("What is your message? ").encode("utf-8")
 
 
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:

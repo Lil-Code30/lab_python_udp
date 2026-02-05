@@ -14,6 +14,13 @@ L'objectif de ce laboratoire est de vous familiariser avec la programmation de r
 ### Questions
 
 1. Expliquez en 2–3 phrases pourquoi len(s) peut être différent de len(b).
-   **Reponse:**
+
+   **Réponse:**
 
    > len(s) compte le nombre de caractères Unicode dans le texte, alors que len(b) compte le nombre de bytes reels dans le fichier
+
+2. Pourquoi les sockets envoient-elles des bytes plutôt que des str ?
+
+   **Réponse:**
+
+   > parce que la communications réseau sont basées sur le transfert des bytes (chaîne d’octets)
