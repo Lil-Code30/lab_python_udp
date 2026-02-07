@@ -30,3 +30,9 @@ L'objectif de ce laboratoire est de vous familiariser avec la programmation de r
    **Réponse:**
 
    > digest() renvoie le hash sous forme binaires (octets) tandis que hexdigest() renvoie le hash sous forme textuelles (hexadécimal).
+
+4. À quoi sert un nonce dans un échange réseau ?
+
+   **Réponse:**
+
+   > Garantit que chaque échange est unique.

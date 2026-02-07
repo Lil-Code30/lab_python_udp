@@ -1,5 +1,5 @@
 import socket
-import hashlib
+import hashlib, secrets
 from pathlib import Path
 
 HOST = "127.0.0.1"
@@ -12,11 +12,11 @@ def flip_first_bit(data: bytes):
     ba[0] == 0b00000001 
     return bytes(ba)
 
+nonce = secrets.token_bytes(16)
 msg = Path("data/message.txt").read_text(encoding="utf-8").encode("utf-8")
-h = hashlib.sha256(msg).hexdigest() 
-corrupt_msg = flip_first_bit(msg)
+h = hashlib.sha256(nonce + msg).hexdigest() 
 
-payload = corrupt_msg + b"\x00" + h.encode("ascii")
+payload = msg + nonce + b"\x00" + h.encode("ascii")
 
 
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
