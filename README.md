@@ -17,7 +17,7 @@ L'objectif de ce laboratoire est de vous familiariser avec la programmation de r
 
    **Réponse:**
 
-   > len(s) compte le nombre de caractères Unicode dans le texte, alors que len(b) compte le nombre de bytes reels dans le fichier
+   > len(s) compte le nombre de caractères utf-8 dans le texte, alors que len(b) compte le nombre de bytes reels dans le fichier. Le format utf-8 utilise un nombre de variable d'octet variable pour chaque caractère. Pour un caractère du plan ASCII, un seul octet sera utilisé. Par contre, les caractères non-ASCII occuperont plus d'un octet d'où la différence entre le nombre de caractères de la chaine et sa taille en octets dans le cas général.
 
 2. Pourquoi les sockets envoient-elles des bytes plutôt que des str ?
 
