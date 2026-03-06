@@ -4,6 +4,7 @@ from pathlib import Path
 
 HOST = "127.0.0.1"
 PORT = 12345
+BLOCK_SIZE = 64
 
 def flip_first_bit(data: bytes):
     if len(data) == 0:
@@ -21,5 +22,5 @@ payload = msg + nonce + b"\x00" + h.encode("ascii")
 
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
     s.sendto(payload, (HOST, PORT))
-    data, _ = s.recvfrom(64)
+    data, _ = s.recvfrom(BLOCK_SIZE)
     print("Réponse:", data.decode("utf-8", errors="replace"))
